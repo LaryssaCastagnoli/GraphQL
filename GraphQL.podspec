@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "With GraphQL making requests will be easier, it helps in the creation of queries and mutations made in GraphiQL."
 
-  s.homepage     = "http://raywenderlich.com"
+  s.homepage     = "https://github.com/LaryssaCastagnoli/GraphQL"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license     = { :type => 'MIT', :file => 'LICENSE' }
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -51,7 +51,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  #s.author             = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com" }
+  s.author             = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com" }
   # Or just: s.author    = "Laryssa Castagnoli"
   s.authors            = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com", "Millena Galvão Matos" => "millena.gmatos@gmail.com" }
   # s.social_media_url   = "http://twitter.com/Laryssa Castagnoli"
@@ -62,11 +62,9 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios
-  s.platform     = :ios, "10.0"
-  s.swift_version = "4.2"
+
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
+  s.ios.deployment_target = "10.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -78,7 +76,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/LaryssaCastagnoli/GraphQL.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/LaryssaCastagnoli/GraphQL.git", :tag => s.version.to_s }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
