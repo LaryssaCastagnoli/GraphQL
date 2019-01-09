@@ -11,20 +11,21 @@ import Alamofire
 import SwiftyJSON
 
 open class Response {
-    required init(fromJson: JSON) { }
+    required public init(fromJson: JSON) { }
 }
 
 public class GraphQLExpect<CustomResponse> where CustomResponse: Response {
-    typealias block = (_ response: CustomResponse?) -> Void
-    static func with(queryType: QueryType,
-                        attribute: String? = nil,
-                        client: Client,
-                        variables: Dictionary<String, Any>? = nil,
-                        completion: @escaping block){
+    public init() {}
+    public typealias block = (_ response: CustomResponse?) -> Void
+    static public func with(queryType: QueryType,
+                            attribute: String? = nil,
+                            client: Client,
+                            variables: Dictionary<String, Any>? = nil,
+                            completion: @escaping block){
         let query = QueryLoader(type: queryType, attribute: attribute)
         var body = Dictionary<String, Any>()
         var headers : HTTPHeaders = [:]
-        if let token = Token.getToken(){
+        if let token = TokenBearer.getToken(){
             headers = ["Authorization" : "Bearer \(token)"] //if token
         }
         body["query"] = query.queryString
@@ -39,7 +40,7 @@ public class GraphQLExpect<CustomResponse> where CustomResponse: Response {
                 body["variables"] = variables?.toInput()
             }
         }
-
+        
         Alamofire.request(client.apiURL,
                           method: .post,
                           parameters: body,
