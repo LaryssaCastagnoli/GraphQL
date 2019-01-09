@@ -50,11 +50,11 @@ public class Public: Client{
 }
 
 public class TokenBearer {
-    public func saveToken(token: String){
+    public static func saveToken(token: String){
         UserDefaults.standard.set(token, forKey: "token")
     }
     
-    public func deleteToken(){
+    public static func deleteToken(){
         UserDefaults.standard.set(nil, forKey: "token")
     }
     
