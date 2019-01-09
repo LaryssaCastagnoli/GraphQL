@@ -9,7 +9,7 @@
 import UIKit
 
 enum QueryType: String {
-    case defaultType = "defaultType"
+    case defaultType = "default"
 }
 
 class QueryLoader{

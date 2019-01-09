@@ -12,7 +12,6 @@
 		63EC72D721E63013003BF980 /* GraphQLExpect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC72D621E63012003BF980 /* GraphQLExpect.swift */; };
 		63EC72DD21E6501E003BF980 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC72DC21E6501E003BF980 /* Constants.swift */; };
 		63EC72DF21E65041003BF980 /* QueryLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC72DE21E65041003BF980 /* QueryLoader.swift */; };
-		63EC72ED21E6530B003BF980 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63EC72EC21E6530B003BF980 /* SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +22,6 @@
 		63EC72D621E63012003BF980 /* GraphQLExpect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphQLExpect.swift; sourceTree = "<group>"; };
 		63EC72DC21E6501E003BF980 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		63EC72DE21E65041003BF980 /* QueryLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryLoader.swift; sourceTree = "<group>"; };
-		63EC72EA21E652FC003BF980 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		63EC72EC21E6530B003BF980 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
 		A0DFE100D588971BA7961371 /* Pods-GraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphQL/Pods-GraphQL.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE42B936CE78D0860A2BCC4 /* Pods-GraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphQL/Pods-GraphQL.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EC72ED21E6530B003BF980 /* SwiftyJSON.framework in Frameworks */,
 				177CD82BE8B4BE249A41EF3C /* Pods_GraphQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,8 +50,6 @@
 		24FA1B2962BDD3460099CBCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				63EC72EA21E652FC003BF980 /* Alamofire.framework */,
-				63EC72EC21E6530B003BF980 /* SwiftyJSON.framework */,
 				58422432D61C3853BC2D80FB /* Pods_GraphQL.framework */,
 			);
 			name = Frameworks;
