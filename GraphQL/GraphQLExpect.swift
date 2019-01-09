@@ -10,11 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class Response {
+public class Response {
     required init(fromJson: JSON) { }
 }
 
-class GraphQLExpect<CustomResponse> where CustomResponse: Response {
+public class GraphQLExpect<CustomResponse> where CustomResponse: Response {
     typealias block = (_ response: CustomResponse?) -> Void
     static func with(queryType: QueryType,
                         attribute: String? = nil,
