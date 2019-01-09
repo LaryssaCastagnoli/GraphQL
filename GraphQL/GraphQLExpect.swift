@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-public class Response {
+open class Response {
     required init(fromJson: JSON) { }
 }
 
