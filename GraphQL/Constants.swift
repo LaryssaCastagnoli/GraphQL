@@ -20,7 +20,7 @@ open class Private: Client{
         return nil
     }
     public var apiURL: URL{
-        return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
+        return URL(string: UserDefaults.standard.value(forKey: "apiURLPrivate") as! String)!
     }
     
     public static func settingsPrivateData(apiURL: String!){
