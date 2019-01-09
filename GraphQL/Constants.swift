@@ -23,7 +23,7 @@ open class Private: Client{
         return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
     }
     
-    public func settingsPrivateData(apiURL: String!){
+    public static func settingsPrivateData(apiURL: String!){
         UserDefaults.standard.setValue(apiURL, forKey: "apiURLPrivate")
     }
 }
@@ -42,7 +42,7 @@ public class Public: Client{
         return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
     }
     
-    public func settingsPublicData(clientId: String? = nil, clientSecret: String? = nil, apiURL: String!){
+    public static func settingsPublicData(clientId: String? = nil, clientSecret: String? = nil, apiURL: String!){
         UserDefaults.standard.setValue(clientId, forKey: "clientPublicId")
         UserDefaults.standard.setValue(clientSecret, forKey: "clientPublicSecret")
         UserDefaults.standard.setValue(apiURL, forKey: "apiURLPublic")
