@@ -1,0 +1,70 @@
+//
+//  API.swift
+//  BritaniaReceitas
+//
+//  Created by Laryssa Castagnoli on 30/11/18.
+//  Copyright © 2018 Solid. All rights reserved.
+//
+
+import UIKit
+
+class Response {
+    required init(fromJson: JSON) { }
+}
+
+class GraphQLExpect<CustomResponse> where CustomResponse: Response {
+    typealias block = (_ response: CustomResponse?) -> Void
+    static func with(queryType: QueryType,
+                        attribute: String? = nil,
+                        client: Client,
+                        variables: Dictionary<String, Any>? = nil,
+                        completion: @escaping block){
+        let query = QueryLoader(type: queryType, attribute: attribute)
+        var body = Dictionary<String, Any>()
+        var headers : HTTPHeaders = [:]
+        if let token = Token.getToken(){
+            headers = ["Authorization" : "Bearer \(token)"] //if token
+        }
+        body["query"] = query.queryString
+        
+        if variables != nil{
+            if client.clientId != nil{
+                var variablesWithClient = variables
+                variablesWithClient?["clientId"] = client.clientId
+                variablesWithClient?["clientSecret"] = client.clientSecret
+                body["variables"] = variablesWithClient?.toInput()
+            }else{
+                body["variables"] = variables?.toInput()
+            }
+        }
+
+        Alamofire.request(client.apiURL,
+                          method: .post,
+                          parameters: body,
+                          encoding: JSONEncoding.default,
+                          headers: headers)
+            .responseJSON(completionHandler: { (response) in
+                switch response.result {
+                case .success:
+                    let json = JSON(response.result.value as Any)
+                    let item = CustomResponse(fromJson: json)
+                    completion(item)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                    completion(nil)
+                }
+            })
+    }
+}
+
+extension Dictionary{
+    func toInput() -> String{
+        var input = Dictionary<String, Any>()
+        input["input"] = self
+        let jsonData = try! JSONSerialization.data(withJSONObject: input, options: .prettyPrinted)
+        if let decoded = String(data: jsonData, encoding: .utf8){
+            return decoded
+        }
+        return ""
+    }
+}
