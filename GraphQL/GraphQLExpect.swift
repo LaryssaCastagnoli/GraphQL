@@ -17,7 +17,7 @@ open class Response {
 public class GraphQLExpect<CustomResponse> where CustomResponse: Response {
     public init() {}
     public typealias block = (_ response: CustomResponse?) -> Void
-    static public func with(queryType: QueryType,
+    static public func with(queryType: String,
                             attribute: String? = nil,
                             client: Client,
                             variables: Dictionary<String, Any>? = nil,
