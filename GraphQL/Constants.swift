@@ -12,7 +12,7 @@ public protocol Client {
 }
 
 open class Private: Client{
-    
+    public init() {}
     public var clientId: String?{
         return nil
     }
@@ -20,23 +20,32 @@ open class Private: Client{
         return nil
     }
     public var apiURL: URL{
-        
-        return URL(string: "url api private")!
+        return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
+    }
+    
+    public func settingsPrivateData(apiURL: String!){
+        UserDefaults.standard.setValue(apiURL, forKey: "apiURLPrivate")
     }
 }
 
 public class Public: Client{
     public init() {}
-    
     public var Isclient: Bool = true
+    
     public var clientId: String?{
-        return Isclient ? "client id" : nil
+        return Isclient ? UserDefaults.standard.value(forKey: "clientPublicId") as? String : nil
     }
     public var clientSecret: String?{
-        return Isclient ? "client secret" : nil
+        return Isclient ? UserDefaults.standard.value(forKey: "clientPublicSecret") as? String : nil
     }
     public var apiURL: URL{
-        return URL(string: "url api public")!
+        return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
+    }
+    
+    public func settingsPublicData(clientId: String? = nil, clientSecret: String? = nil, apiURL: String!){
+        UserDefaults.standard.setValue(clientId, forKey: "clientPublicId")
+        UserDefaults.standard.setValue(clientSecret, forKey: "clientPublicSecret")
+        UserDefaults.standard.setValue(apiURL, forKey: "apiURLPublic")
     }
 }
 
