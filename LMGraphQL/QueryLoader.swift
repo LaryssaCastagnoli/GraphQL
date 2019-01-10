@@ -8,19 +8,15 @@
 //
 import UIKit
 
-enum QueryType: String {
-    case defaultType = "defaultType"
-}
-
 class QueryLoader{
     let queryString: String
     
-    init(type: QueryType, attribute: String? = nil) {
+    init(type: String, attribute: String? = nil) {
         queryString = QueryLoader.loadQueryFile(type: type, attribute: attribute)!
     }
     
-    static func loadQueryFile(type: QueryType, attribute: String?) -> String? {
-        guard let path = Bundle.main.path(forResource: type.rawValue, ofType: "query") else {
+    static func loadQueryFile(type: String, attribute: String?) -> String? {
+        guard let path = Bundle.main.path(forResource: type, ofType: "query") else {
             return nil
         }
         

@@ -7,22 +7,25 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class Response {
-    required init(fromJson: JSON) { }
+open class LMResponse {
+    required public init(fromJson: JSON) { }
 }
 
-class GraphQLExpect<CustomResponse> where CustomResponse: Response {
-    typealias block = (_ response: CustomResponse?) -> Void
-    static func with(queryType: QueryType,
-                        attribute: String? = nil,
-                        client: Client,
-                        variables: Dictionary<String, Any>? = nil,
-                        completion: @escaping block){
+public class LMGraphQLExpect<CustomResponse> where CustomResponse: LMResponse {
+    public init() {}
+    public typealias block = (_ response: CustomResponse?) -> Void
+    static public func with(queryType: String,
+                            attribute: String? = nil,
+                            client: LMClient,
+                            variables: Dictionary<String, Any>? = nil,
+                            completion: @escaping block){
         let query = QueryLoader(type: queryType, attribute: attribute)
         var body = Dictionary<String, Any>()
         var headers : HTTPHeaders = [:]
-        if let token = Token.getToken(){
+        if let token = LMGraphQLTokenBearer.getToken(){
             headers = ["Authorization" : "Bearer \(token)"] //if token
         }
         body["query"] = query.queryString
@@ -37,7 +40,7 @@ class GraphQLExpect<CustomResponse> where CustomResponse: Response {
                 body["variables"] = variables?.toInput()
             }
         }
-
+        
         Alamofire.request(client.apiURL,
                           method: .post,
                           parameters: body,

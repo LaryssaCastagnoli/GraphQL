@@ -1,6 +1,6 @@
 //
-//  GraphQL.h
-//  GraphQL
+//  LMGraphQL.h
+//  LMGraphQL
 //
 //  Created by BRQ on 09/01/19.
 //  Copyright © 2019 Solid. All rights reserved.
