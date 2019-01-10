@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		177CD82BE8B4BE249A41EF3C /* Pods_GraphQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58422432D61C3853BC2D80FB /* Pods_GraphQL.framework */; };
 		63EC72D021E62F9F003BF980 /* LMGraphQL.h in Headers */ = {isa = PBXBuildFile; fileRef = 63EC72CE21E62F9F003BF980 /* LMGraphQL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63EC72D721E63013003BF980 /* GraphQLExpect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC72D621E63012003BF980 /* GraphQLExpect.swift */; };
 		63EC72DD21E6501E003BF980 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EC72DC21E6501E003BF980 /* Constants.swift */; };
@@ -17,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		3BBB637184F080A6352DC298 /* Pods_LMGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LMGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		58422432D61C3853BC2D80FB /* Pods_GraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0A7247E66CEC411E020B5B /* Pods-LMGraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMGraphQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMGraphQL/Pods-LMGraphQL.debug.xcconfig"; sourceTree = "<group>"; };
 		63EC72CB21E62F9F003BF980 /* LMGraphQL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LMGraphQL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63EC72CE21E62F9F003BF980 /* LMGraphQL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMGraphQL.h; sourceTree = "<group>"; };
@@ -26,8 +24,6 @@
 		63EC72DC21E6501E003BF980 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		63EC72DE21E65041003BF980 /* QueryLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryLoader.swift; sourceTree = "<group>"; };
 		683D834B38A4CB585F962E53 /* Pods-LMGraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMGraphQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-LMGraphQL/Pods-LMGraphQL.release.xcconfig"; sourceTree = "<group>"; };
-		A0DFE100D588971BA7961371 /* Pods-GraphQL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GraphQL/Pods-GraphQL.debug.xcconfig"; sourceTree = "<group>"; };
-		CEE42B936CE78D0860A2BCC4 /* Pods-GraphQL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQL.release.xcconfig"; path = "Pods/Target Support Files/Pods-GraphQL/Pods-GraphQL.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				177CD82BE8B4BE249A41EF3C /* Pods_GraphQL.framework in Frameworks */,
 				8D29439CBB6383A63A63082E /* Pods_LMGraphQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,8 +41,6 @@
 		209482EA00D9DD94B8AF9F0C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A0DFE100D588971BA7961371 /* Pods-GraphQL.debug.xcconfig */,
-				CEE42B936CE78D0860A2BCC4 /* Pods-GraphQL.release.xcconfig */,
 				5F0A7247E66CEC411E020B5B /* Pods-LMGraphQL.debug.xcconfig */,
 				683D834B38A4CB585F962E53 /* Pods-LMGraphQL.release.xcconfig */,
 			);
@@ -57,7 +50,6 @@
 		24FA1B2962BDD3460099CBCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				58422432D61C3853BC2D80FB /* Pods_GraphQL.framework */,
 				3BBB637184F080A6352DC298 /* Pods_LMGraphQL.framework */,
 			);
 			name = Frameworks;
