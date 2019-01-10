@@ -5,13 +5,13 @@
 //  Copyright © 2018 Solid. All rights reserved.
 //
 
-public protocol Client {
+public protocol LMClient {
     var clientId: String? {get}
     var clientSecret: String? {get}
     var apiURL: URL {get}
 }
 
-open class Private: Client{
+open class LMGraphQLPrivate: LMClient{
     public init() {}
     public var clientId: String?{
         return nil
@@ -23,12 +23,12 @@ open class Private: Client{
         return URL(string: UserDefaults.standard.value(forKey: "apiURLPrivate") as! String)!
     }
     
-    public static func settingsPrivateData(apiURL: String!){
+    public static func config(apiURL: String!){
         UserDefaults.standard.setValue(apiURL, forKey: "apiURLPrivate")
     }
 }
 
-public class Public: Client{
+public class LMGraphQLPublic: LMClient{
     public init() {}
     public var Isclient: Bool = true
     
@@ -42,14 +42,14 @@ public class Public: Client{
         return URL(string: UserDefaults.standard.value(forKey: "apiURLPublic") as! String)!
     }
     
-    public static func settingsPublicData(clientId: String? = nil, clientSecret: String? = nil, apiURL: String!){
+    public static func config(clientId: String? = nil, clientSecret: String? = nil, apiURL: String!){
         UserDefaults.standard.setValue(clientId, forKey: "clientPublicId")
         UserDefaults.standard.setValue(clientSecret, forKey: "clientPublicSecret")
         UserDefaults.standard.setValue(apiURL, forKey: "apiURLPublic")
     }
 }
 
-public class TokenBearer {
+public class LMGraphQLTokenBearer {
     public static func saveToken(token: String){
         UserDefaults.standard.set(token, forKey: "token")
     }

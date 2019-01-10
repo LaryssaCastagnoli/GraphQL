@@ -15,16 +15,16 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "GraphQL"
+  s.name         = "LMGraphQL"
   s.version      = "0.0.1"
-  s.summary      = "GraphQL will help with your requests"
+  s.summary      = "LMGraphQL will help with your requests"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "With GraphQL making requests will be easier, it helps in the creation of queries and mutations made in GraphiQL."
+  s.description  = "With LMGraphQL making requests will be easier, it helps in the creation of queries and mutations made in GraphiQL."
 
   s.homepage     = "https://github.com/LaryssaCastagnoli/GraphQL"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -51,10 +51,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com" }
-  # Or just: s.author    = "Laryssa Castagnoli"
   s.authors            = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com", "Millena Galvão Matos" => "millena.gmatos@gmail.com" }
-  # s.social_media_url   = "http://twitter.com/Laryssa Castagnoli"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
