@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.source_files = 'LMGraphQL/**/*'
   s.swift_version = '4.2'
-  s.dependency 'Alamofire', '~> 4.7.3'
-  s.dependency 'SwiftyJSON', '~> 4.2.0'
+  s.dependency 'Alamofire'
+  s.dependency 'SwiftyJSON'
 end
