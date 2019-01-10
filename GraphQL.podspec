@@ -21,19 +21,17 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/LaryssaCastagnoli/LMGraphQL'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.authors            = { "Laryssa Castagnoli" => "lcfragoso4@gmail.com", "Millena Galvão Matos" => "millena.gmatos@gmail.com" }
+  s.authors            = { 'Laryssa Castagnoli' => 'lcfragoso4@gmail.com', 'Millena Galvão Matos" => millena.gmatos@gmail.com' }
   s.source           = { :git => "https://github.com/LaryssaCastagnoli/LMGraphQL.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'GraphQL/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'GraphQL' => ['GraphQL/Assets/*.png']
-  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit'
   s.dependency "Alamofire", "~> 4.7.3"
   s.dependency "SwiftyJSON", "~> 4.2.0"
+
 end
