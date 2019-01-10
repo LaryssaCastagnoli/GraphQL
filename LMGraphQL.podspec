@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/LaryssaCastagnoli/LMGraphQL.git', :tag => 'v0.0.4' }
   s.ios.deployment_target = '10.0'
   s.source_files = 'LMGraphQL/**/*'
+  s.exclude_files = "LMGraphQL/**/*.plist"
   s.swift_version = '4.2'
   s.dependency 'Alamofire'
   s.dependency 'SwiftyJSON'
