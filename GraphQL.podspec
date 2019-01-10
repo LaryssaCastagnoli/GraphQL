@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/LaryssaCastagnoli/LMGraphQL'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.authors            = { 'Laryssa Castagnoli' => 'lcfragoso4@gmail.com', 'Millena Galvão Matos" => millena.gmatos@gmail.com' }
-  s.source           = { :git => "https://github.com/LaryssaCastagnoli/LMGraphQL.git", :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/LaryssaCastagnoli/LMGraphQL.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '10.0'
 
