@@ -72,5 +72,5 @@ pod 'LMGraphQL'
 
 ## Authors
 
-Laryssa Castagnoli, Millena Galvão
+[Laryssa Castagnoli](http://github.com/LaryssaCastagnoli), [Millena Galvão](http://github.com/millenagm)
 
