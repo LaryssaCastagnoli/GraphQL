@@ -1,5 +1,7 @@
 # LMGraphQL
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/6928b7e3e58f3eb71a82/maintainability)](https://codeclimate.com/github/millenagm/LMGraphQL/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/6928b7e3e58f3eb71a82/test_coverage)](https://codeclimate.com/github/millenagm/LMGraphQL/test_coverage)
+
 ## Example
 
 In AppDelegate.swift, just import LMGraphQL framework and config LMGraphQLPrivate and LMGraphQLPublic.
@@ -26,12 +28,12 @@ To create a new query, you must create a file with the extension .query and put 
 
 ```swift
 mutation login($input: LoginInput!){
-login(input: $input){
-token {
-accessToken
-}
-errors
-}
+	login(input: $input){
+		token {
+			accessToken
+		}
+		errors
+	}
 }
 ```
 
@@ -70,5 +72,5 @@ pod 'LMGraphQL'
 
 ## Authors
 
-Laryssa Castagnoli, Millena Galvão
+[Laryssa Castagnoli](http://github.com/LaryssaCastagnoli), [Millena Galvão](http://github.com/millenagm)
 
